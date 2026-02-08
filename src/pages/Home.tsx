@@ -188,6 +188,15 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
       )}
+
+      <div style={{ position: "fixed", bottom: "20px", right: "20px", display: "flex", flexDirection: "column", gap: "10px", zIndex: 9999 }}>
+        <button onClick={() => navigate("/share/TestUser")} style={{ padding: "10px", background: "white", border: "1px solid black", cursor: "pointer" }}>
+          test share warning
+        </button>
+        <button onClick={() => navigate("/share/TestUser?logged=true")} style={{ padding: "10px", background: "white", border: "1px solid black", cursor: "pointer" }}>
+          test share files
+        </button>
+      </div>
     </main>
   );
 };

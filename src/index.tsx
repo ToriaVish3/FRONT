@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Cloud } from "./pages/Cloud";
+import { Share } from "./pages/Share";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -10,6 +11,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home/cloud/:username" element={<Cloud />} />
+        <Route path="/share/:shareUsername" element={<Share />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
